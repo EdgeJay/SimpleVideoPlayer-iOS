@@ -17,6 +17,7 @@
 		3266E89C1B42E3360040E59C /* MobileVLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3266E89B1B42E3360040E59C /* MobileVLCKit.framework */; };
 		328292A21B42F02D008A09DF /* BrowseVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A11B42F02D008A09DF /* BrowseVideosViewController.m */; };
 		328292A51B42F6F1008A09DF /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A41B42F6F1008A09DF /* NavController.m */; };
+		328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328292A61B42FDE3008A09DF /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		328292A11B42F02D008A09DF /* BrowseVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseVideosViewController.m; sourceTree = "<group>"; };
 		328292A31B42F6F1008A09DF /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		328292A41B42F6F1008A09DF /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
+		328292A61B42FDE3008A09DF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */,
 				3266E89C1B42E3360040E59C /* MobileVLCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +139,7 @@
 		323711BC1B42BE440001BC69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				328292A61B42FDE3008A09DF /* AssetsLibrary.framework */,
 				3266E89B1B42E3360040E59C /* MobileVLCKit.framework */,
 			);
 			name = Frameworks;

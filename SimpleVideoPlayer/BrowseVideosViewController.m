@@ -8,8 +8,11 @@
 
 #import "BrowseVideosViewController.h"
 #import "NavController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
-@interface BrowseVideosViewController ()
+@interface BrowseVideosViewController () {
+    ALAssetsLibrary *videoAssetsLib;
+}
 
 @end
 
@@ -30,12 +33,45 @@ static NSString * const reuseIdentifier = @"VideoCell";
     
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear: animated];
+    
+    // Fetch videos managed by Photos app
+    [self fetchVideos];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark <UICollectionViewDataSource>
+#pragma mark - Video management methods
+-(void)fetchVideos {
+    
+    if (!videoAssetsLib) {
+        videoAssetsLib = [[ALAssetsLibrary alloc] init];
+    }
+    
+    [videoAssetsLib enumerateGroupsWithTypes: ALAssetsGroupAll usingBlock: ^(ALAssetsGroup *group, BOOL *stop) {
+        NSLog(@"%@", group);
+    } failureBlock: ^(NSError *error) {
+        [self showFetchVideosError];
+    }];
+}
+
+#pragma mark - Alerts
+-(void)showFetchVideosError {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Uh oh"
+                                                    message: @"Unable to browse videos now. Make sure you have granted this app access to your Photos app"
+                                                   delegate: nil
+                                          cancelButtonTitle: @"OK"
+                                          otherButtonTitles: nil];
+    
+    [alert show];
+}
+
+#pragma mark - <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
 #warning Incomplete method implementation -- Return the number of sections
