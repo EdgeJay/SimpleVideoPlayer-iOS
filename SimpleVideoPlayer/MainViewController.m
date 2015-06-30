@@ -10,8 +10,8 @@
 
 @interface MainViewController ()
 
-@property (nonatomic, strong) IBOutlet UIButton *browseButton;
-@property (nonatomic, strong) IBOutlet UIButton *lastViewedButton;
+@property (nonatomic, weak) IBOutlet UIButton *browseButton;
+@property (nonatomic, weak) IBOutlet UIButton *lastViewedButton;
 
 @end
 

@@ -15,6 +15,8 @@
 		323711B01B42BDA20001BC69 /* SimpleVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711AF1B42BDA20001BC69 /* SimpleVideoPlayerTests.m */; };
 		323711BF1B42BEC70001BC69 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711BE1B42BEC70001BC69 /* MainViewController.m */; };
 		3266E89C1B42E3360040E59C /* MobileVLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3266E89B1B42E3360040E59C /* MobileVLCKit.framework */; };
+		328292A21B42F02D008A09DF /* BrowseVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A11B42F02D008A09DF /* BrowseVideosViewController.m */; };
+		328292A51B42F6F1008A09DF /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A41B42F6F1008A09DF /* NavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 		323711BD1B42BEC70001BC69 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		323711BE1B42BEC70001BC69 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		3266E89B1B42E3360040E59C /* MobileVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileVLCKit.framework; path = ../../../../_RESOURCES/iOS/Libraries/MobileVLCKit/MobileVLCKit.framework; sourceTree = "<group>"; };
+		328292A01B42F02D008A09DF /* BrowseVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseVideosViewController.h; sourceTree = "<group>"; };
+		328292A11B42F02D008A09DF /* BrowseVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseVideosViewController.m; sourceTree = "<group>"; };
+		328292A31B42F6F1008A09DF /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
+		328292A41B42F6F1008A09DF /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,10 @@
 				323711A21B42BDA20001BC69 /* LaunchScreen.xib */,
 				323711BD1B42BEC70001BC69 /* MainViewController.h */,
 				323711BE1B42BEC70001BC69 /* MainViewController.m */,
+				328292A31B42F6F1008A09DF /* NavController.h */,
+				328292A41B42F6F1008A09DF /* NavController.m */,
+				328292A01B42F02D008A09DF /* BrowseVideosViewController.h */,
+				328292A11B42F02D008A09DF /* BrowseVideosViewController.m */,
 				323711931B42BDA20001BC69 /* Supporting Files */,
 			);
 			path = SimpleVideoPlayer;
@@ -180,6 +190,7 @@
 				TargetAttributes = {
 					3237118F1B42BDA20001BC69 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 6S4336TAM2;
 					};
 					323711A81B42BDA20001BC69 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -233,6 +244,8 @@
 			files = (
 				323711991B42BDA20001BC69 /* AppDelegate.m in Sources */,
 				323711BF1B42BEC70001BC69 /* MainViewController.m in Sources */,
+				328292A51B42F6F1008A09DF /* NavController.m in Sources */,
+				328292A21B42F02D008A09DF /* BrowseVideosViewController.m in Sources */,
 				323711961B42BDA20001BC69 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -349,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,6 +374,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/wuhuijie/Documents/_RESOURCES/iOS/Libraries/MobileVLCKit,
@@ -368,6 +383,7 @@
 				INFOPLIST_FILE = SimpleVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -375,6 +391,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/wuhuijie/Documents/_RESOURCES/iOS/Libraries/MobileVLCKit,
@@ -382,6 +400,7 @@
 				INFOPLIST_FILE = SimpleVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
