@@ -14,10 +14,10 @@
 		323711A41B42BDA20001BC69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323711A21B42BDA20001BC69 /* LaunchScreen.xib */; };
 		323711B01B42BDA20001BC69 /* SimpleVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711AF1B42BDA20001BC69 /* SimpleVideoPlayerTests.m */; };
 		323711BF1B42BEC70001BC69 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711BE1B42BEC70001BC69 /* MainViewController.m */; };
-		3266E89C1B42E3360040E59C /* MobileVLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3266E89B1B42E3360040E59C /* MobileVLCKit.framework */; };
 		328292A21B42F02D008A09DF /* BrowseVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A11B42F02D008A09DF /* BrowseVideosViewController.m */; };
 		328292A51B42F6F1008A09DF /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A41B42F6F1008A09DF /* NavController.m */; };
 		328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328292A61B42FDE3008A09DF /* AssetsLibrary.framework */; };
+		328292B51B431ADF008A09DF /* MobileVLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328292B41B431ADF008A09DF /* MobileVLCKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +44,12 @@
 		323711AF1B42BDA20001BC69 /* SimpleVideoPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVideoPlayerTests.m; sourceTree = "<group>"; };
 		323711BD1B42BEC70001BC69 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		323711BE1B42BEC70001BC69 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		3266E89B1B42E3360040E59C /* MobileVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileVLCKit.framework; path = ../../../../_RESOURCES/iOS/Libraries/MobileVLCKit/MobileVLCKit.framework; sourceTree = "<group>"; };
 		328292A01B42F02D008A09DF /* BrowseVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseVideosViewController.h; sourceTree = "<group>"; };
 		328292A11B42F02D008A09DF /* BrowseVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseVideosViewController.m; sourceTree = "<group>"; };
 		328292A31B42F6F1008A09DF /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		328292A41B42F6F1008A09DF /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
 		328292A61B42FDE3008A09DF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		328292B41B431ADF008A09DF /* MobileVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileVLCKit.framework; path = ../../../../_RESOURCES/iOS/Libraries/VLCKit/build/MobileVLCKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */,
-				3266E89C1B42E3360040E59C /* MobileVLCKit.framework in Frameworks */,
+				328292B51B431ADF008A09DF /* MobileVLCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +139,8 @@
 		323711BC1B42BE440001BC69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				328292B41B431ADF008A09DF /* MobileVLCKit.framework */,
 				328292A61B42FDE3008A09DF /* AssetsLibrary.framework */,
-				3266E89B1B42E3360040E59C /* MobileVLCKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -383,6 +383,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/wuhuijie/Documents/_RESOURCES/iOS/Libraries/MobileVLCKit,
+					/Users/wuhuijie/Documents/_RESOURCES/iOS/Libraries/VLCKit/build,
 				);
 				INFOPLIST_FILE = SimpleVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -400,6 +401,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/wuhuijie/Documents/_RESOURCES/iOS/Libraries/MobileVLCKit,
+					/Users/wuhuijie/Documents/_RESOURCES/iOS/Libraries/VLCKit/build,
 				);
 				INFOPLIST_FILE = SimpleVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

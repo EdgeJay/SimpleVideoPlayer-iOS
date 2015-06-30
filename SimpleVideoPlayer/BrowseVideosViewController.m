@@ -9,6 +9,7 @@
 #import "BrowseVideosViewController.h"
 #import "NavController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <MobileVLCKit/MobileVLCKit.h>
 
 @interface BrowseVideosViewController () {
     ALAssetsLibrary *videoAssetsLib;
