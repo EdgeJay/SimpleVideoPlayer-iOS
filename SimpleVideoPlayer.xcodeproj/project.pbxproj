@@ -13,8 +13,8 @@
 		323711A11B42BDA20001BC69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 323711A01B42BDA20001BC69 /* Images.xcassets */; };
 		323711A41B42BDA20001BC69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323711A21B42BDA20001BC69 /* LaunchScreen.xib */; };
 		323711B01B42BDA20001BC69 /* SimpleVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711AF1B42BDA20001BC69 /* SimpleVideoPlayerTests.m */; };
-		323711BB1B42BE3C0001BC69 /* MobileVLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323711BA1B42BE3C0001BC69 /* MobileVLCKit.framework */; };
 		323711BF1B42BEC70001BC69 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711BE1B42BEC70001BC69 /* MainViewController.m */; };
+		3266E89C1B42E3360040E59C /* MobileVLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3266E89B1B42E3360040E59C /* MobileVLCKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +39,9 @@
 		323711A91B42BDA20001BC69 /* SimpleVideoPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleVideoPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		323711AE1B42BDA20001BC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		323711AF1B42BDA20001BC69 /* SimpleVideoPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVideoPlayerTests.m; sourceTree = "<group>"; };
-		323711BA1B42BE3C0001BC69 /* MobileVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileVLCKit.framework; path = ../../../Documents/_RESOURCES/iOS/Libraries/MobileVLCKit/MobileVLCKit.framework; sourceTree = "<group>"; };
 		323711BD1B42BEC70001BC69 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		323711BE1B42BEC70001BC69 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		3266E89B1B42E3360040E59C /* MobileVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileVLCKit.framework; path = ../../../../_RESOURCES/iOS/Libraries/MobileVLCKit/MobileVLCKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				323711BB1B42BE3C0001BC69 /* MobileVLCKit.framework in Frameworks */,
+				3266E89C1B42E3360040E59C /* MobileVLCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,7 @@
 		323711BC1B42BE440001BC69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				323711BA1B42BE3C0001BC69 /* MobileVLCKit.framework */,
+				3266E89B1B42E3360040E59C /* MobileVLCKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -438,6 +438,7 @@
 				323711B51B42BDA20001BC69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		323711B61B42BDA20001BC69 /* Build configuration list for PBXNativeTarget "SimpleVideoPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +447,7 @@
 				323711B81B42BDA20001BC69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
