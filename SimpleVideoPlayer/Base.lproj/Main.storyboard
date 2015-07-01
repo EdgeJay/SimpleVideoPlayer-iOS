@@ -225,23 +225,6 @@
             </objects>
             <point key="canvasLocation" x="2801" y="340"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="BUI-p9-2hg">
-            <objects>
-                <viewController id="8Ai-8H-F6K" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DWD-2q-x9t"/>
-                        <viewControllerLayoutGuide type="bottom" id="iTV-5b-Pc4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hM4-r5-Gsy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r8d-zH-nXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="button-pause.png" width="30" height="30"/>

@@ -31,6 +31,7 @@
 		328292A51B42F6F1008A09DF /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A41B42F6F1008A09DF /* NavController.m */; };
 		328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328292A61B42FDE3008A09DF /* AssetsLibrary.framework */; };
 		32FD2A091B4445F3004CACAB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD2A081B4445F3004CACAB /* AVFoundation.framework */; };
+		32FD2A0B1B4467E5004CACAB /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 32FD2A0A1B4467E5004CACAB /* splash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		328292A41B42F6F1008A09DF /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
 		328292A61B42FDE3008A09DF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		32FD2A081B4445F3004CACAB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		32FD2A0A1B4467E5004CACAB /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		323711D31B43F4850001BC69 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				32FD2A0A1B4467E5004CACAB /* splash.png */,
 				323711D91B4419CC0001BC69 /* icons */,
 				323711D41B43F4850001BC69 /* videos */,
 			);
@@ -303,6 +306,7 @@
 				323711E11B441D980001BC69 /* speaker-on.png in Resources */,
 				3237119F1B42BDA20001BC69 /* Main.storyboard in Resources */,
 				323711A41B42BDA20001BC69 /* LaunchScreen.xib in Resources */,
+				32FD2A0B1B4467E5004CACAB /* splash.png in Resources */,
 				323711DC1B4419CC0001BC69 /* button-pause.png in Resources */,
 				323711D81B43F4850001BC69 /* elephants_dream.mp4 in Resources */,
 				323711E01B441D980001BC69 /* speaker-off.png in Resources */,
@@ -458,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -476,8 +481,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huijie Wu (6S4336TAM2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huijie Wu (6S4336TAM2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/wuhuijie/Documents/_RESOURCES/iOS/Libraries/MobileVLCKit,
@@ -486,7 +492,7 @@
 				INFOPLIST_FILE = SimpleVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "49c488d3-3e25-42cf-999f-f94fac98ba7d";
 			};
 			name = Release;
 		};
