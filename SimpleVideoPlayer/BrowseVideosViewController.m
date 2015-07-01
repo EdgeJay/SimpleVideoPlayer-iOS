@@ -10,10 +10,12 @@
 #import "NavController.h"
 //#import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileVLCKit/MobileVLCKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface BrowseVideosViewController () {
     //ALAssetsLibrary *videoAssetsLib;
     NSMutableArray *videos;
+    NSMutableDictionary *thumbnails;
 }
 
 @end
@@ -32,7 +34,7 @@ static NSString * const reuseIdentifier = @"VideoCell";
     [self.collectionView registerClass: [UICollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    
+    thumbnails = [[NSMutableDictionary alloc] initWithCapacity: 0];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -89,6 +91,7 @@ static NSString * const reuseIdentifier = @"VideoCell";
     */
 }
 
+/*
 #pragma mark - Alerts
 -(void)showFetchVideosError {
     
@@ -100,6 +103,7 @@ static NSString * const reuseIdentifier = @"VideoCell";
     
     [alert show];
 }
+*/
 
 #pragma mark - <UICollectionViewDataSource>
 
@@ -118,10 +122,23 @@ static NSString * const reuseIdentifier = @"VideoCell";
     // Get ALAsset
     //ALAsset *videoAsset = [videos objectAtIndex: indexPath.item];
     
+    // Get video path
+    NSString *videoPath = [videos objectAtIndex: indexPath.item];
+    
     // Configure the cell
-    //CGFloat cellWd = cell.bounds.size.width;
-    //CGFloat cellHt = cell.bounds.size.height;
     UIImageView *imgView;
+    UIActivityIndicatorView *activityView;
+    
+    // Setup activity indicator
+    if (![cell viewWithTag: 11]) {
+        activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        [activityView setCenter: CGPointMake(40.0f, 40.0f)];
+        [activityView setTag: 11];
+        [cell addSubview: activityView];
+    }
+    else {
+        activityView = (UIActivityIndicatorView *)[cell viewWithTag: 11];
+    }
     
     // See if cell already has image view. If not create one.
     if (![cell viewWithTag: 10]) {
@@ -137,9 +154,50 @@ static NSString * const reuseIdentifier = @"VideoCell";
         imgView = (UIImageView *)[cell viewWithTag: 10];
     }
     
+    
     //[imgView setImage: [UIImage imageWithCGImage: videoAsset.aspectRatioThumbnail]];
     
+    
+    // Check if video thumbnail was already generated before
+    if ([thumbnails objectForKey: videoPath]) {
+        [imgView setImage: (UIImage *)[thumbnails objectForKey: videoPath]];
+    }
+    else {
+        // Show cell as busy
+        [activityView setHidden: NO];
+        [activityView startAnimating];
+        
+        // Retrieve single video frame to use as thumbnail
+        AVURLAsset *asset = [[AVURLAsset alloc] initWithURL: [[NSURL alloc] initFileURLWithPath: videoPath] options: nil];
+        
+        AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset: asset];
+        gen.appliesPreferredTrackTransform = YES;
+        gen.maximumSize = CGSizeMake(200.0f, 200.0f);
+        
+        CMTime time = CMTimeMakeWithSeconds(60.0, 24000);
+        
+        [gen generateCGImagesAsynchronouslyForTimes: @[[NSValue valueWithCMTime: time]] completionHandler: ^(CMTime requestedTime, CGImageRef image, CMTime actualTime, AVAssetImageGeneratorResult result, NSError *error) {
+            
+            [activityView setHidden: YES];
+            [activityView stopAnimating];
+            
+            if (result == AVAssetImageGeneratorSucceeded) {
+                
+                UIImage *img = [UIImage imageWithCGImage: image];
+                [imgView setImage: img];
+                
+                // Cache in dictionary
+                [thumbnails setObject: img forKey: videoPath];
+            }
+            else {
+                NSLog(@"failed to create thumbnail image for video");
+                NSLog(@"%@", error);
+            }
+        }];
+    }
+    
     [cell setBackgroundColor: [UIColor whiteColor]];
+    [cell bringSubviewToFront: activityView];
     
     return cell;
 }
@@ -173,21 +231,6 @@ static NSString * const reuseIdentifier = @"VideoCell";
     }
     */
 }
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 #pragma mark - UI actions
 -(IBAction)onBack:(id)sender {

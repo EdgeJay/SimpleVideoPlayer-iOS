@@ -30,6 +30,7 @@
 		328292A21B42F02D008A09DF /* BrowseVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A11B42F02D008A09DF /* BrowseVideosViewController.m */; };
 		328292A51B42F6F1008A09DF /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A41B42F6F1008A09DF /* NavController.m */; };
 		328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328292A61B42FDE3008A09DF /* AssetsLibrary.framework */; };
+		32FD2A091B4445F3004CACAB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FD2A081B4445F3004CACAB /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,7 @@
 		323711AF1B42BDA20001BC69 /* SimpleVideoPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVideoPlayerTests.m; sourceTree = "<group>"; };
 		323711BD1B42BEC70001BC69 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		323711BE1B42BEC70001BC69 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		323711C01B43801F0001BC69 /* MobileVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileVLCKit.framework; path = ../../../Documents/_RESOURCES/iOS/Libraries/MobileVLCKit/MobileVLCKit.framework; sourceTree = "<group>"; };
+		323711C01B43801F0001BC69 /* MobileVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileVLCKit.framework; path = ../../../../_RESOURCES/iOS/Libraries/MobileVLCKit/MobileVLCKit.framework; sourceTree = "<group>"; };
 		323711C21B4382C00001BC69 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		323711C41B4382C70001BC69 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		323711C61B43838E0001BC69 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -76,6 +77,7 @@
 		328292A31B42F6F1008A09DF /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		328292A41B42F6F1008A09DF /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
 		328292A61B42FDE3008A09DF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		32FD2A081B4445F3004CACAB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32FD2A091B4445F3004CACAB /* AVFoundation.framework in Frameworks */,
 				323711CF1B438C820001BC69 /* libstdc++.6.0.9.dylib in Frameworks */,
 				323711CD1B4383D00001BC69 /* libbz2.dylib in Frameworks */,
 				323711CB1B4383B60001BC69 /* libiconv.dylib in Frameworks */,
@@ -173,6 +176,7 @@
 		323711BC1B42BE440001BC69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32FD2A081B4445F3004CACAB /* AVFoundation.framework */,
 				323711CE1B438C820001BC69 /* libstdc++.6.0.9.dylib */,
 				323711CC1B4383D00001BC69 /* libbz2.dylib */,
 				323711CA1B4383B60001BC69 /* libiconv.dylib */,
