@@ -8,11 +8,11 @@
 
 #import "BrowseVideosViewController.h"
 #import "NavController.h"
-#import <AssetsLibrary/AssetsLibrary.h>
+//#import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileVLCKit/MobileVLCKit.h>
 
 @interface BrowseVideosViewController () {
-    ALAssetsLibrary *videoAssetsLib;
+    //ALAssetsLibrary *videoAssetsLib;
     NSMutableArray *videos;
 }
 
@@ -50,15 +50,24 @@ static NSString * const reuseIdentifier = @"VideoCell";
 #pragma mark - Video management methods
 -(void)fetchVideos {
     
+    /*
     if (!videoAssetsLib) {
         videoAssetsLib = [[ALAssetsLibrary alloc] init];
     }
+    */
     
     videos = [[NSMutableArray alloc] initWithCapacity: 0];
     
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    
+    [videos addObject: [mainBundle pathForResource: @"big_buck_bunny" ofType: @"mp4"]];
+    [videos addObject: [mainBundle pathForResource: @"elephants_dream" ofType: @"mp4"]];
+    
+    [self.collectionView reloadData];
+    
     // Calling the following method will also trigger alert to be displayed asking user for access
     // to photos if not granted before
-    
+    /*
     [videoAssetsLib enumerateGroupsWithTypes: ALAssetsGroupAll usingBlock: ^(ALAssetsGroup *group, BOOL *stop) {
         
         // Use filter to get video files only
@@ -77,6 +86,7 @@ static NSString * const reuseIdentifier = @"VideoCell";
     } failureBlock: ^(NSError *error) {
         [self showFetchVideosError];
     }];
+    */
 }
 
 #pragma mark - Alerts
@@ -106,7 +116,7 @@ static NSString * const reuseIdentifier = @"VideoCell";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
     
     // Get ALAsset
-    ALAsset *videoAsset = [videos objectAtIndex: indexPath.item];
+    //ALAsset *videoAsset = [videos objectAtIndex: indexPath.item];
     
     // Configure the cell
     //CGFloat cellWd = cell.bounds.size.width;
@@ -115,7 +125,6 @@ static NSString * const reuseIdentifier = @"VideoCell";
     
     // See if cell already has image view. If not create one.
     if (![cell viewWithTag: 10]) {
-        NSLog(@"need to create image view");
         
         imgView = [[UIImageView alloc] initWithFrame: CGRectMake(5.0f, 5.0f, 70.0f, 70.0f)];
         [imgView setClipsToBounds: YES];
@@ -125,11 +134,10 @@ static NSString * const reuseIdentifier = @"VideoCell";
         [cell addSubview: imgView];
     }
     else {
-        NSLog(@"re-using image view");
         imgView = (UIImageView *)[cell viewWithTag: 10];
     }
     
-    [imgView setImage: [UIImage imageWithCGImage: videoAsset.aspectRatioThumbnail]];
+    //[imgView setImage: [UIImage imageWithCGImage: videoAsset.aspectRatioThumbnail]];
     
     [cell setBackgroundColor: [UIColor whiteColor]];
     
@@ -149,12 +157,21 @@ static NSString * const reuseIdentifier = @"VideoCell";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     // Get ALAsset
+    NSString *videoPath = (NSString *)[videos objectAtIndex: indexPath.item];
+    
+    if (videoPath) {
+        [(NavController *)self.navigationController gotoVideoPlayer: videoPath];
+    }
+    
+    /*
+    // Get ALAsset
     ALAsset *videoAsset = [videos objectAtIndex: indexPath.item];
     
     if (videoAsset) {
         ALAssetRepresentation *rep = videoAsset.defaultRepresentation;
         [(NavController *)self.navigationController gotoVideoPlayer: rep.url];
     }
+    */
 }
 
 /*

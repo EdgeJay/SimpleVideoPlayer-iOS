@@ -32,17 +32,17 @@
     [[self presentingViewController] dismissViewControllerAnimated: YES completion: nil];
 }
 
--(void)gotoVideoPlayer: (NSURL *)videoUrl {
+-(void)gotoVideoPlayer: (NSString *)videoPath {
     
-    if (!videoUrl) {
-        NSLog(@"oops missing video url");
+    if (!videoPath) {
+        NSLog(@"oops missing video path");
         return;
     }
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier: @"VideoPlayerVC"];
     
-    [(VideoPlayerViewController *)vc setVideoUrl: videoUrl];
+    [(VideoPlayerViewController *)vc setVideoPath: videoPath];
     
     [self pushViewController: vc animated: YES];
 }

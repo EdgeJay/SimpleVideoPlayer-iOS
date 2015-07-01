@@ -21,6 +21,8 @@
 		323711CD1B4383D00001BC69 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 323711CC1B4383D00001BC69 /* libbz2.dylib */; };
 		323711CF1B438C820001BC69 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 323711CE1B438C820001BC69 /* libstdc++.6.0.9.dylib */; };
 		323711D21B43965E0001BC69 /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711D11B43965E0001BC69 /* VideoPlayerViewController.m */; };
+		323711D71B43F4850001BC69 /* big_buck_bunny.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 323711D51B43F4850001BC69 /* big_buck_bunny.mp4 */; };
+		323711D81B43F4850001BC69 /* elephants_dream.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 323711D61B43F4850001BC69 /* elephants_dream.mp4 */; };
 		328292A21B42F02D008A09DF /* BrowseVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A11B42F02D008A09DF /* BrowseVideosViewController.m */; };
 		328292A51B42F6F1008A09DF /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A41B42F6F1008A09DF /* NavController.m */; };
 		328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328292A61B42FDE3008A09DF /* AssetsLibrary.framework */; };
@@ -59,6 +61,8 @@
 		323711CE1B438C820001BC69 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		323711D01B43965E0001BC69 /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
 		323711D11B43965E0001BC69 /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
+		323711D51B43F4850001BC69 /* big_buck_bunny.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_buck_bunny.mp4; sourceTree = "<group>"; };
+		323711D61B43F4850001BC69 /* elephants_dream.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = elephants_dream.mp4; sourceTree = "<group>"; };
 		328292A01B42F02D008A09DF /* BrowseVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseVideosViewController.h; sourceTree = "<group>"; };
 		328292A11B42F02D008A09DF /* BrowseVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseVideosViewController.m; sourceTree = "<group>"; };
 		328292A31B42F6F1008A09DF /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		323711921B42BDA20001BC69 /* SimpleVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				323711D31B43F4850001BC69 /* assets */,
 				323711BC1B42BE440001BC69 /* Frameworks */,
 				323711971B42BDA20001BC69 /* AppDelegate.h */,
 				323711981B42BDA20001BC69 /* AppDelegate.m */,
@@ -170,6 +175,23 @@
 				328292A61B42FDE3008A09DF /* AssetsLibrary.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		323711D31B43F4850001BC69 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				323711D41B43F4850001BC69 /* videos */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		323711D41B43F4850001BC69 /* videos */ = {
+			isa = PBXGroup;
+			children = (
+				323711D51B43F4850001BC69 /* big_buck_bunny.mp4 */,
+				323711D61B43F4850001BC69 /* elephants_dream.mp4 */,
+			);
+			path = videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +277,8 @@
 			files = (
 				3237119F1B42BDA20001BC69 /* Main.storyboard in Resources */,
 				323711A41B42BDA20001BC69 /* LaunchScreen.xib in Resources */,
+				323711D81B43F4850001BC69 /* elephants_dream.mp4 in Resources */,
+				323711D71B43F4850001BC69 /* big_buck_bunny.mp4 in Resources */,
 				323711A11B42BDA20001BC69 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

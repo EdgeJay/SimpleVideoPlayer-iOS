@@ -7,10 +7,9 @@
 //
 
 #import "MainViewController.h"
-#import <MobileVLCKit/MobileVLCKit.h>
 
 @interface MainViewController () {
-    VLCMediaPlayer *mediaPlayer;
+    
 }
 
 @property (nonatomic, weak) IBOutlet UIButton *browseButton;
@@ -25,9 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view, typically from a nib.
     
-    mediaPlayer = [[VLCMediaPlayer alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {

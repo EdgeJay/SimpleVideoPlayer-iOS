@@ -17,7 +17,8 @@
 
 /**
  * Call this method to push in VideoPlayerViewController
+ * @param videoPath path to video file
  */
--(void)gotoVideoPlayer: (NSURL *)videoUrl;
+-(void)gotoVideoPlayer: (NSString *)videoPath;
 
 @end
