@@ -7,6 +7,7 @@
 //
 
 #import "NavController.h"
+#import "VideoPlayerViewController.h"
 
 @interface NavController ()
 
@@ -33,8 +34,15 @@
 
 -(void)gotoVideoPlayer: (NSURL *)videoUrl {
     
+    if (!videoUrl) {
+        NSLog(@"oops missing video url");
+        return;
+    }
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier: @"VideoPlayerVC"];
+    
+    [(VideoPlayerViewController *)vc setVideoUrl: videoUrl];
     
     [self pushViewController: vc animated: YES];
 }

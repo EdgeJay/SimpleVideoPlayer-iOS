@@ -10,4 +10,6 @@
 
 @interface VideoPlayerViewController : UIViewController
 
+@property (nonatomic, weak) NSURL *videoUrl;
+
 @end

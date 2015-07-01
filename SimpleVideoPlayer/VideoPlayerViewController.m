@@ -14,9 +14,18 @@
 
 @implementation VideoPlayerViewController
 
+@synthesize videoUrl;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+    
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden: YES animated: YES];
 }
 
 - (void)didReceiveMemoryWarning {

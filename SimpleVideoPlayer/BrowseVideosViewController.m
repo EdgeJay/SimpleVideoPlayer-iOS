@@ -13,6 +13,7 @@
 
 @interface BrowseVideosViewController () {
     ALAssetsLibrary *videoAssetsLib;
+    NSMutableArray *videos;
 }
 
 @end
@@ -53,8 +54,26 @@ static NSString * const reuseIdentifier = @"VideoCell";
         videoAssetsLib = [[ALAssetsLibrary alloc] init];
     }
     
+    videos = [[NSMutableArray alloc] initWithCapacity: 0];
+    
+    // Calling the following method will also trigger alert to be displayed asking user for access
+    // to photos if not granted before
+    
     [videoAssetsLib enumerateGroupsWithTypes: ALAssetsGroupAll usingBlock: ^(ALAssetsGroup *group, BOOL *stop) {
-        NSLog(@"%@", group);
+        
+        // Use filter to get video files only
+        ALAssetsFilter *filter = [ALAssetsFilter allVideos];
+        [group setAssetsFilter: filter];
+        
+        [group enumerateAssetsUsingBlock: ^(ALAsset *result, NSUInteger index, BOOL *stop) {
+            // result might be null, so need to watch out
+            if (result) {
+                [videos addObject: result];
+            }
+        }];
+        
+        [self.collectionView reloadData];
+        
     } failureBlock: ^(NSError *error) {
         [self showFetchVideosError];
     }];
@@ -75,39 +94,68 @@ static NSString * const reuseIdentifier = @"VideoCell";
 #pragma mark - <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
+    return 1;
 }
 
-
 - (NSInteger)collectionView: (UICollectionView *)collectionView numberOfItemsInSection: (NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+    return videos.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
     
+    // Get ALAsset
+    ALAsset *videoAsset = [videos objectAtIndex: indexPath.item];
+    
     // Configure the cell
+    //CGFloat cellWd = cell.bounds.size.width;
+    //CGFloat cellHt = cell.bounds.size.height;
+    UIImageView *imgView;
+    
+    // See if cell already has image view. If not create one.
+    if (![cell viewWithTag: 10]) {
+        NSLog(@"need to create image view");
+        
+        imgView = [[UIImageView alloc] initWithFrame: CGRectMake(5.0f, 5.0f, 70.0f, 70.0f)];
+        [imgView setClipsToBounds: YES];
+        [imgView setContentMode: UIViewContentModeScaleAspectFill];
+        [imgView setBackgroundColor: [UIColor blackColor]];
+        [imgView setTag: 10];
+        [cell addSubview: imgView];
+    }
+    else {
+        NSLog(@"re-using image view");
+        imgView = (UIImageView *)[cell viewWithTag: 10];
+    }
+    
+    [imgView setImage: [UIImage imageWithCGImage: videoAsset.aspectRatioThumbnail]];
+    
+    [cell setBackgroundColor: [UIColor whiteColor]];
     
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)collectionView: (UICollectionView *)collectionView shouldHighlightItemAtIndexPath: (NSIndexPath *)indexPath {
 	return YES;
 }
-*/
 
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)collectionView: (UICollectionView *)collectionView shouldSelectItemAtIndexPath: (NSIndexPath *)indexPath {
     return YES;
 }
-*/
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // Get ALAsset
+    ALAsset *videoAsset = [videos objectAtIndex: indexPath.item];
+    
+    if (videoAsset) {
+        ALAssetRepresentation *rep = videoAsset.defaultRepresentation;
+        [(NavController *)self.navigationController gotoVideoPlayer: rep.url];
+    }
+}
 
 /*
 // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
