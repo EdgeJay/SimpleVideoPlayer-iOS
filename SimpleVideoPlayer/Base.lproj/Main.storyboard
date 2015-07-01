@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello there!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNs-Bh-3ga">
-                                <rect key="frame" x="221" y="80" width="158" height="38.5"/>
+                                <rect key="frame" x="221" y="80" width="158" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNy-XW-sxf">
-                                <rect key="frame" x="207" y="130" width="186.5" height="18"/>
+                                <rect key="frame" x="207" y="130" width="187" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,8 +33,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWq-5R-oBn">
                                 <rect key="frame" x="36" y="470" width="528" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uQs-8m-9BH">
-                                        <rect key="frame" x="20" y="20" width="223.5" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="uQs-8m-9BH">
+                                        <rect key="frame" x="20" y="20" width="224" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Browse Videos">
                                             <color key="titleColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,12 +172,105 @@
                     <view key="view" contentMode="scaleToFill" id="yT8-Mi-Nm6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="px5-yq-0pH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDb-ZM-3C2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onMovieViewClick:" destination="kzB-H4-5q3" eventType="touchUpInside" id="rqM-xI-KyW"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.74999999999999978" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4h-b9-gjU">
+                                <rect key="frame" x="16" y="516" width="568" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ2-CU-EVv">
+                                        <rect key="frame" x="269" y="17" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Hzg-jO-OtY"/>
+                                            <constraint firstAttribute="width" constant="30" id="gyp-ly-KxP"/>
+                                        </constraints>
+                                        <state key="normal" image="button-pause.png"/>
+                                        <connections>
+                                            <action selector="onPlayButtonClick:" destination="kzB-H4-5q3" eventType="touchUpInside" id="sir-Hf-ZZ6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dF5-nM-O2S">
+                                        <rect key="frame" x="324" y="17" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="YzD-27-vxI"/>
+                                            <constraint firstAttribute="height" constant="30" id="gQ0-jE-VZt"/>
+                                        </constraints>
+                                        <state key="normal" image="speaker-on.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onMuteButtonClick:" destination="kzB-H4-5q3" eventType="touchUpInside" id="Yyg-ty-IQF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="cDr-Zo-18I"/>
+                                    <constraint firstAttribute="centerY" secondItem="QZ2-CU-EVv" secondAttribute="centerY" id="dox-y1-pde"/>
+                                    <constraint firstAttribute="centerY" secondItem="dF5-nM-O2S" secondAttribute="centerY" id="lOj-1F-3P1"/>
+                                    <constraint firstAttribute="centerX" secondItem="QZ2-CU-EVv" secondAttribute="centerX" id="woD-kU-lJ7"/>
+                                    <constraint firstItem="dF5-nM-O2S" firstAttribute="leading" secondItem="QZ2-CU-EVv" secondAttribute="trailing" constant="25" id="yt0-3F-7VJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k4h-b9-gjU" firstAttribute="leading" secondItem="yT8-Mi-Nm6" secondAttribute="leadingMargin" id="23d-7p-62I"/>
+                            <constraint firstItem="onY-S6-rSy" firstAttribute="top" secondItem="k4h-b9-gjU" secondAttribute="bottom" constant="20" id="4yw-g6-qwi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="px5-yq-0pH" secondAttribute="trailing" constant="-16" id="8Vf-2D-5gK"/>
+                            <constraint firstItem="px5-yq-0pH" firstAttribute="leading" secondItem="yT8-Mi-Nm6" secondAttribute="leadingMargin" constant="-16" id="LXq-kV-h9S"/>
+                            <constraint firstItem="onY-S6-rSy" firstAttribute="top" secondItem="eDb-ZM-3C2" secondAttribute="bottom" id="SSk-gn-aX5"/>
+                            <constraint firstItem="k4h-b9-gjU" firstAttribute="trailing" secondItem="yT8-Mi-Nm6" secondAttribute="trailingMargin" id="TV0-RG-n3z"/>
+                            <constraint firstItem="eDb-ZM-3C2" firstAttribute="top" secondItem="yT8-Mi-Nm6" secondAttribute="topMargin" id="bhh-Wu-1BN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eDb-ZM-3C2" secondAttribute="trailing" constant="-16" id="lpi-79-w9z"/>
+                            <constraint firstItem="onY-S6-rSy" firstAttribute="top" secondItem="px5-yq-0pH" secondAttribute="bottom" id="mg0-cx-O9x"/>
+                            <constraint firstItem="px5-yq-0pH" firstAttribute="top" secondItem="yT8-Mi-Nm6" secondAttribute="topMargin" id="tFZ-Ph-TlC"/>
+                            <constraint firstItem="eDb-ZM-3C2" firstAttribute="leading" secondItem="yT8-Mi-Nm6" secondAttribute="leadingMargin" constant="-16" id="tdQ-Qu-MeM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="movieOverlayButton" destination="eDb-ZM-3C2" id="7g1-PZ-DPH"/>
+                        <outlet property="movieView" destination="px5-yq-0pH" id="r7V-cf-jrw"/>
+                        <outlet property="muteButton" destination="dF5-nM-O2S" id="6HF-NF-y4u"/>
+                        <outlet property="playButton" destination="QZ2-CU-EVv" id="FFP-m1-8YV"/>
+                        <outlet property="playbackControlsView" destination="k4h-b9-gjU" id="jnl-mV-HjD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0n-Wj-MBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2801" y="340"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="BUI-p9-2hg">
+            <objects>
+                <viewController id="8Ai-8H-F6K" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DWD-2q-x9t"/>
+                        <viewControllerLayoutGuide type="bottom" id="iTV-5b-Pc4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hM4-r5-Gsy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8d-zH-nXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
+    <resources>
+        <image name="button-pause.png" width="30" height="30"/>
+        <image name="speaker-on.png" width="30" height="30"/>
+    </resources>
 </document>

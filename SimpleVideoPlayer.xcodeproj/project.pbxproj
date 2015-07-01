@@ -23,6 +23,10 @@
 		323711D21B43965E0001BC69 /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711D11B43965E0001BC69 /* VideoPlayerViewController.m */; };
 		323711D71B43F4850001BC69 /* big_buck_bunny.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 323711D51B43F4850001BC69 /* big_buck_bunny.mp4 */; };
 		323711D81B43F4850001BC69 /* elephants_dream.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 323711D61B43F4850001BC69 /* elephants_dream.mp4 */; };
+		323711DC1B4419CC0001BC69 /* button-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 323711DA1B4419CC0001BC69 /* button-pause.png */; };
+		323711DD1B4419CC0001BC69 /* button-play.png in Resources */ = {isa = PBXBuildFile; fileRef = 323711DB1B4419CC0001BC69 /* button-play.png */; };
+		323711E01B441D980001BC69 /* speaker-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 323711DE1B441D980001BC69 /* speaker-off.png */; };
+		323711E11B441D980001BC69 /* speaker-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 323711DF1B441D980001BC69 /* speaker-on.png */; };
 		328292A21B42F02D008A09DF /* BrowseVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A11B42F02D008A09DF /* BrowseVideosViewController.m */; };
 		328292A51B42F6F1008A09DF /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A41B42F6F1008A09DF /* NavController.m */; };
 		328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328292A61B42FDE3008A09DF /* AssetsLibrary.framework */; };
@@ -63,6 +67,10 @@
 		323711D11B43965E0001BC69 /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
 		323711D51B43F4850001BC69 /* big_buck_bunny.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_buck_bunny.mp4; sourceTree = "<group>"; };
 		323711D61B43F4850001BC69 /* elephants_dream.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = elephants_dream.mp4; sourceTree = "<group>"; };
+		323711DA1B4419CC0001BC69 /* button-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-pause.png"; sourceTree = "<group>"; };
+		323711DB1B4419CC0001BC69 /* button-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-play.png"; sourceTree = "<group>"; };
+		323711DE1B441D980001BC69 /* speaker-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker-off.png"; sourceTree = "<group>"; };
+		323711DF1B441D980001BC69 /* speaker-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker-on.png"; sourceTree = "<group>"; };
 		328292A01B42F02D008A09DF /* BrowseVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseVideosViewController.h; sourceTree = "<group>"; };
 		328292A11B42F02D008A09DF /* BrowseVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseVideosViewController.m; sourceTree = "<group>"; };
 		328292A31B42F6F1008A09DF /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 		323711D31B43F4850001BC69 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				323711D91B4419CC0001BC69 /* icons */,
 				323711D41B43F4850001BC69 /* videos */,
 			);
 			path = assets;
@@ -192,6 +201,17 @@
 				323711D61B43F4850001BC69 /* elephants_dream.mp4 */,
 			);
 			path = videos;
+			sourceTree = "<group>";
+		};
+		323711D91B4419CC0001BC69 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				323711DE1B441D980001BC69 /* speaker-off.png */,
+				323711DF1B441D980001BC69 /* speaker-on.png */,
+				323711DA1B4419CC0001BC69 /* button-pause.png */,
+				323711DB1B4419CC0001BC69 /* button-play.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +295,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323711DD1B4419CC0001BC69 /* button-play.png in Resources */,
+				323711E11B441D980001BC69 /* speaker-on.png in Resources */,
 				3237119F1B42BDA20001BC69 /* Main.storyboard in Resources */,
 				323711A41B42BDA20001BC69 /* LaunchScreen.xib in Resources */,
+				323711DC1B4419CC0001BC69 /* button-pause.png in Resources */,
 				323711D81B43F4850001BC69 /* elephants_dream.mp4 in Resources */,
+				323711E01B441D980001BC69 /* speaker-off.png in Resources */,
 				323711D71B43F4850001BC69 /* big_buck_bunny.mp4 in Resources */,
 				323711A11B42BDA20001BC69 /* Images.xcassets in Resources */,
 			);
