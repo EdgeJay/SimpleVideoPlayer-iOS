@@ -10,6 +10,14 @@
 
 @interface NavController : UINavigationController
 
+/**
+ * Call this method to return to MainViewController
+ */
 -(void)unwindToMain;
+
+/**
+ * Call this method to push in VideoPlayerViewController
+ */
+-(void)gotoVideoPlayer: (NSURL *)videoUrl;
 
 @end

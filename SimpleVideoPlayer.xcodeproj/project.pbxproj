@@ -14,10 +14,16 @@
 		323711A41B42BDA20001BC69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323711A21B42BDA20001BC69 /* LaunchScreen.xib */; };
 		323711B01B42BDA20001BC69 /* SimpleVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711AF1B42BDA20001BC69 /* SimpleVideoPlayerTests.m */; };
 		323711BF1B42BEC70001BC69 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711BE1B42BEC70001BC69 /* MainViewController.m */; };
+		323711C11B43801F0001BC69 /* MobileVLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323711C01B43801F0001BC69 /* MobileVLCKit.framework */; };
+		323711C31B4382C00001BC69 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323711C21B4382C00001BC69 /* AudioToolbox.framework */; };
+		323711C71B43838E0001BC69 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323711C61B43838E0001BC69 /* CoreAudio.framework */; };
+		323711CB1B4383B60001BC69 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 323711CA1B4383B60001BC69 /* libiconv.dylib */; };
+		323711CD1B4383D00001BC69 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 323711CC1B4383D00001BC69 /* libbz2.dylib */; };
+		323711CF1B438C820001BC69 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 323711CE1B438C820001BC69 /* libstdc++.6.0.9.dylib */; };
+		323711D21B43965E0001BC69 /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323711D11B43965E0001BC69 /* VideoPlayerViewController.m */; };
 		328292A21B42F02D008A09DF /* BrowseVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A11B42F02D008A09DF /* BrowseVideosViewController.m */; };
 		328292A51B42F6F1008A09DF /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328292A41B42F6F1008A09DF /* NavController.m */; };
 		328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328292A61B42FDE3008A09DF /* AssetsLibrary.framework */; };
-		328292B51B431ADF008A09DF /* MobileVLCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328292B41B431ADF008A09DF /* MobileVLCKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +50,20 @@
 		323711AF1B42BDA20001BC69 /* SimpleVideoPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVideoPlayerTests.m; sourceTree = "<group>"; };
 		323711BD1B42BEC70001BC69 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		323711BE1B42BEC70001BC69 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		323711C01B43801F0001BC69 /* MobileVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileVLCKit.framework; path = ../../../Documents/_RESOURCES/iOS/Libraries/MobileVLCKit/MobileVLCKit.framework; sourceTree = "<group>"; };
+		323711C21B4382C00001BC69 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		323711C41B4382C70001BC69 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		323711C61B43838E0001BC69 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		323711CA1B4383B60001BC69 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		323711CC1B4383D00001BC69 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		323711CE1B438C820001BC69 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		323711D01B43965E0001BC69 /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		323711D11B43965E0001BC69 /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
 		328292A01B42F02D008A09DF /* BrowseVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseVideosViewController.h; sourceTree = "<group>"; };
 		328292A11B42F02D008A09DF /* BrowseVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseVideosViewController.m; sourceTree = "<group>"; };
 		328292A31B42F6F1008A09DF /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
 		328292A41B42F6F1008A09DF /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
 		328292A61B42FDE3008A09DF /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		328292B41B431ADF008A09DF /* MobileVLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileVLCKit.framework; path = ../../../../_RESOURCES/iOS/Libraries/VLCKit/build/MobileVLCKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +71,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323711CF1B438C820001BC69 /* libstdc++.6.0.9.dylib in Frameworks */,
+				323711CD1B4383D00001BC69 /* libbz2.dylib in Frameworks */,
+				323711CB1B4383B60001BC69 /* libiconv.dylib in Frameworks */,
+				323711C71B43838E0001BC69 /* CoreAudio.framework in Frameworks */,
+				323711C31B4382C00001BC69 /* AudioToolbox.framework in Frameworks */,
 				328292A71B42FDE4008A09DF /* AssetsLibrary.framework in Frameworks */,
-				328292B51B431ADF008A09DF /* MobileVLCKit.framework in Frameworks */,
+				323711C11B43801F0001BC69 /* MobileVLCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +124,8 @@
 				328292A41B42F6F1008A09DF /* NavController.m */,
 				328292A01B42F02D008A09DF /* BrowseVideosViewController.h */,
 				328292A11B42F02D008A09DF /* BrowseVideosViewController.m */,
+				323711D01B43965E0001BC69 /* VideoPlayerViewController.h */,
+				323711D11B43965E0001BC69 /* VideoPlayerViewController.m */,
 				323711931B42BDA20001BC69 /* Supporting Files */,
 			);
 			path = SimpleVideoPlayer;
@@ -139,7 +160,13 @@
 		323711BC1B42BE440001BC69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				328292B41B431ADF008A09DF /* MobileVLCKit.framework */,
+				323711CE1B438C820001BC69 /* libstdc++.6.0.9.dylib */,
+				323711CC1B4383D00001BC69 /* libbz2.dylib */,
+				323711CA1B4383B60001BC69 /* libiconv.dylib */,
+				323711C61B43838E0001BC69 /* CoreAudio.framework */,
+				323711C41B4382C70001BC69 /* AudioUnit.framework */,
+				323711C21B4382C00001BC69 /* AudioToolbox.framework */,
+				323711C01B43801F0001BC69 /* MobileVLCKit.framework */,
 				328292A61B42FDE3008A09DF /* AssetsLibrary.framework */,
 			);
 			name = Frameworks;
@@ -249,6 +276,7 @@
 				323711991B42BDA20001BC69 /* AppDelegate.m in Sources */,
 				323711BF1B42BEC70001BC69 /* MainViewController.m in Sources */,
 				328292A51B42F6F1008A09DF /* NavController.m in Sources */,
+				323711D21B43965E0001BC69 /* VideoPlayerViewController.m in Sources */,
 				328292A21B42F02D008A09DF /* BrowseVideosViewController.m in Sources */,
 				323711961B42BDA20001BC69 /* main.m in Sources */,
 			);

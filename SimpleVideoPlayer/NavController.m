@@ -31,4 +31,12 @@
     [[self presentingViewController] dismissViewControllerAnimated: YES completion: nil];
 }
 
+-(void)gotoVideoPlayer: (NSURL *)videoUrl {
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier: @"VideoPlayerVC"];
+    
+    [self pushViewController: vc animated: YES];
+}
+
 @end
